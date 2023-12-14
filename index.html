@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButtonSmash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-page-body">
+    <div class="header">Welcome</div>
+
+    <div class="nav-bar">
+        <ul class="nav-bar">
+            <li> <a href="./about.html" target="_blank">About </a><li>
+            <li><a href="./pages/about.html" target="_blank">Share</a></li>
+            <li><a href="./pages/about.html" target="_blank">Background </a></li>
+            <li><a href="./pages/about.html" target="_blank">History </a></li>
+        </ul>
+    </div>
+   
+    <div class="container"> <!--Buttons with differnt links-->
+            
+        <button type="button"
+        onclick="window.open('./pages/button1.html', '_blank')"
+        class="default-button">Click Me</button>
+
+        <button type="button" 
+        onclick="window.open('https://www.interestingfacts.com/fact-list', '_blank')" 
+        class="default-button">Did You Know</button>
+    
+        <button type="button" 
+        onclick="window.open('https://www.google.com', '_blank')" 
+        class="default-button">Take Me There</button>
+        
+        <button type="button" 
+        onclick="window.open('https://findtheinvisiblecow.com', '_blank')" 
+        class="default-button">MOO</button> 
+        
+        <button type="button" 
+        onclick="window.open('https://www.mapcrunch.com/', '_blank')" 
+        class="default-button">Teleport</button>
+        
+        <button type="button" 
+        onclick="window.open('https://longdogechallenge.com/', '_blank')"
+        class="default-button">Wow</button>
+        
+        <button type="button" 
+        onclick="window.open('https://checkbox.toys/scale/', '_blank')" 
+        class="default-button">Box Checker</button>
+        
+        <button type="button" 
+        onclick="window.open('https://sliding.toys/mystic-square/8-puzzle/daily/', '_blank')"
+        class="default-button">NumPuz</button>
+
+        <button type="button" 
+        onclick="window.open('https://hackertyper.com/', '_blank')" 
+        class="default-button">HACKER</button>
+        
+        <button type="button" 
+        onclick="window.open('https://pointerpointer.com/', '_blank')"
+        class="default-button">Weird</button>
+        
+        <button type="button" 
+        onclick="window.open('https://www.google.com', '_blank')" 
+        class="default-button">Take Me There</button>
+        
+        <button type="button" 
+        onclick="window.open('https://www.interestingfacts.com/fact-list', '_blank')"
+        class="default-button">Did You Know</button>
+        
+        <button type="button" 
+        onclick="window.open('./pages/button1.html', '_blank')" 
+        class="default-button">Click Me</button>
+        
+        <button type="button" 
+        onclick="window.open('https://www.interestingfacts.com/fact-list', '_blank')"
+        class="default-button">Did You Know</button>
+        
+        <button type="button" 
+        onclick="window.open('https://www.google.com', '_blank')" 
+        class="default-button">Take Me There</button>
+        
+        <button type="button" 
+        onclick="window.open('https://www.interestingfacts.com/fact-list', '_blank')"
+        class="default-button">Did You Know</button>
+        
+        <button type="button" 
+        onclick="window.open('./images/home.png', '_blank')"
+        class="default-button">Placeholder</button>
+
+        <button type="button" 
+        onclick="window.open('./images/home.png', '_blank')" 
+        class="default-button">Placeholder</button>
+        
+    </div> 
+
+    <div class="random-container"> <!-- takes you to a random link-->
+        <button class="random-button" onclick="redirectToRandom()">Random</button>
+    </div>
+
+    <script> //JavaScript for random button functionallity
+        function redirectTo(url) {
+            // Function to redirect to a specific URL
+            window.location.href = url;
+        }
+
+        function redirectToRandom() {
+            // Array of possible button links
+            var buttonLinks = ['./pages/button1.html', './pages/button2.html', './pages/home-button.html',
+                'https://www.interestingfacts.com/fact-list', 'https://www.google.com', 'https://findtheinvisiblecow.com/',
+                'https://www.mapcrunch.com/', 'https://longdogechallenge.com/', 'https://checkbox.toys/scale/',
+                'https://sliding.toys/mystic-square/8-puzzle/daily/', 'https://hackertyper.com/','https://pointerpointer.com/'
+            ];
+
+            // Get a random index from the array
+            var randomIndex = Math.floor(Math.random() * buttonLinks.length);
+
+            // Redirect to the URL at the random index
+            window.open(buttonLinks[randomIndex], '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+@font-face {
+  font-family: myFont;
+  src: url(./font/RubikBubbles-Regular.ttf);
+}
+
+* {
+  font-family: myFont;
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 99%;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-page-body {
+  background: linear-gradient(grey, black);
+}
+
+.header {
+  display: flex;
+  font-size: 2.5rem;
+  /*border: 0.2em solid green;*/
+  flex-direction: column;
+  max-height: 15%;
+  min-width: 25%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2%;
+  color: orangered;
+  transition: text-shadow 0.3s ease-in-out;
+  transition: font-size 0.3s ease-in-out;
+}
+.header:hover {
+  text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0f0;
+  font-size: 3rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-evenly;
+  gap: 8%;
+  min-width: 40%;
+  margin-top: 4%;
+  list-style-type: none;
+  padding: 0;
+}
+.nav-bar li a {
+  list-style-type: none;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+.nav-bar li a:hover {
+  text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0f0;
+  font-size: 1.5em;
+}
+
+.container {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5%;
+  /*border: 0.2em solid #0000ff;*/
+  margin: 0 auto;
+  margin-bottom: 2%;
+  margin-top: 5%;
+  height: 75%;
+  max-height: 75%;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5%;
+}
+
+.default-button {
+  min-width: 15%;
+  max-height: 20%;
+  padding: 0.5em;
+  background-color: skyblue;
+  cursor: pointer;
+  flex-shrink: 1;
+  border-radius: 8%;
+  gap: 1%;
+}
+
+.default-button:hover {
+  /*background-color: #2980b9;*/
+  box-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0f0;
+  animation: shake 0.5s;
+  text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0f0;
+}
+
+.random-container {
+  display: flex;
+  max-width: 30%;
+  align-self: center;
+  margin: 0% auto;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+
+.random-button {
+  min-width: 90%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  background-color: skyblue;
+  flex-shrink: 1;
+  border-radius: 8%;
+  cursor: pointer;
+}
+.random-button:hover {
+  box-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0f0;
+  animation: shake 0.5s;
+  text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0f0;
+}
+
+@keyframes fly-in {
+  from {
+    transform: translate(-100%);
+    opacity: 0;
+    font-size: 1rem;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+    font-size: 6rem;
+  }
+}
+@keyframes font-size-loop {
+  0%,
+  100% {
+    font-size: 1rem;
+  }
+  50% {
+    font-size: 6rem;
+  }
+}
+@keyframes flash-colors {
+  0%,
+  100% {
+    background-color: white;
+  }
+  10% {
+    background-color: pink;
+  }
+  20% {
+    background-color: orange;
+  }
+  30% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: green;
+  }
+  50% {
+    background-color: blue;
+  }
+  60% {
+    background-color: indigo;
+  }
+  70% {
+    background-color: violet;
+  }
+  80% {
+    background-color: brown;
+  }
+  90% {
+    background-color: gray;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/*Animations*/
+.button-one-body {
+  background-color: white;
+  animation: flash-colors 10s infinite;
+  margin: 0;
+  height: 100vh;
+}
+
+.button-one {
+  font-size: 3rem;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 20%;
+  animation: fly-in 1s ease-out, font-size-loop 2s infinite alternate;
+}
